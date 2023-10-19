@@ -7,12 +7,24 @@ import { AlertController, NavController } from '@ionic/angular';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
+  usuario: any;
 
   constructor(public navCtrl: NavController,
     public alertController : AlertController) { }
 
   ngOnInit() {
+    const usuarioString = localStorage.getItem('usuario');
+    if (usuarioString) {
+      this.usuario = JSON.parse(usuarioString);
+      // Ahora puedes acceder a las propiedades específicas del objeto de usuario
+      const nombre = this.usuario.nombre;
+      const contraseña = this.usuario.contraseña;
+      const repitecontraseña = this.usuario.repitecontraseña;
+      console.log('Nombre del usuario:', nombre);
+      console.log('Email del usuario:', contraseña);
+      console.log('Tipo del usuario:', repitecontraseña);
   }
+}
 
   user = localStorage.getItem('usuario')
   
