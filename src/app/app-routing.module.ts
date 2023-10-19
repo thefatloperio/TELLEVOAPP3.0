@@ -43,7 +43,8 @@ const routes: Routes = [
   },
   {
     path: 'intro',
-    loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule)
+    loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule),
+    canActivate: [NoIngresadoGuard]
   },
 ];
 
