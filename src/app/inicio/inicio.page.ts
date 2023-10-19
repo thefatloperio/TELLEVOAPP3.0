@@ -16,7 +16,6 @@ export class InicioPage implements OnInit {
 
   user = localStorage.getItem('usuario')
   
-  
 
 
   
