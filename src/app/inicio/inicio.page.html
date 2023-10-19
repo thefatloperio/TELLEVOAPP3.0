@@ -1,6 +1,6 @@
 <ion-menu  contentId="main-content" >
-  <ion-header>
-    <ion-toolbar>
+  <ion-header >
+    <ion-toolbar >
       <ion-title>Bienvenido Te Llevo App</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -13,10 +13,10 @@
     <ion-button [routerLink]="['/noauto']">Viajar con Te Llevo</ion-button>
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
   </ion-content>
-  <ion-button (click)="cerrar()" >Cerrar Sesión</ion-button>
+  <ion-button  (click)="cerrar()" >Cerrar Sesión</ion-button>
 </ion-menu>
 <div class="ion-page" id="main-content">
-  <ion-header>
+  <ion-header >
     <ion-toolbar color="secondary">
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
@@ -24,8 +24,8 @@
       <ion-title>inicio</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding"> 
-    <h1 style="text-align:center">Bienvenido Estudiante </h1>
+  <ion-content class="ion-padding" class="glass-content"> 
+    <h1 style="text-align:center" >Bienvenido Estudiante </h1>
     <h1>{{user}}</h1>
     
     <ion-card align="center">
