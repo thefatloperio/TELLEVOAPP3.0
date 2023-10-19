@@ -7,7 +7,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'intro',
     pathMatch: 'full'
   },
   {
@@ -40,6 +40,10 @@ const routes: Routes = [
     path: 'contra',
     loadChildren: () => import('./contra/contra.module').then( m => m.ContraPageModule),
     canActivate: [NoIngresadoGuard]
+  },
+  {
+    path: 'intro',
+    loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule)
   },
 ];
 
